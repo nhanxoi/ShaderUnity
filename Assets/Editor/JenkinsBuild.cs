@@ -15,14 +15,20 @@ public class JenkinsBuild
 
         string[] args = System.Environment.GetCommandLineArgs();
 
+
+        System.Console.WriteLine("Nhan xoi " +  args.Length);
+        System.Console.WriteLine("1 "+  args[1]);
+        System.Console.WriteLine("2 " + args[2]);
+
+
         for (int i = 0; i < args.Length; i++)
         {
             if (args[i] == "-executeMethod" )
             {
                 if(i+4<args.Length)
                 {
-                    appName = args[i + 2];
-                    targetDir = args[i + 3];
+                    appName = args[i + 1];
+                    targetDir = args[i + 2];
                     i += 3;
                 }
                 else
