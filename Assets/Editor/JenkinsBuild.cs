@@ -8,10 +8,10 @@ public class JenkinsBuild
 {
     static string[] EnabledScenes = FindEnabledEditorScenes();
 
-    public static void BuildMacOS(string name , string number)
+    public static void BuildMacOS()
     {
-        string appName = name;
-        string targetDir = "~/Desktop/"+number;
+        string appName = "AppName";
+        string targetDir = "~/Desktop";
 
         string[] args = System.Environment.GetCommandLineArgs();
 
